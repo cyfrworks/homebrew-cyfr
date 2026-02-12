@@ -14,22 +14,22 @@ cask "cyfr" do
   on_macos do
     on_intel do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_darwin_amd64.tar.gz"
-      sha256 "7d2c0efd70265ca61abfedead700ff8945b63049606d55fd680f09a1a28cc88c"
+      sha256 "0a190cf3fa54f3667d527298d934ed88ff91dee0da82b2303c9008d2126ee375"
     end
     on_arm do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_darwin_arm64.tar.gz"
-      sha256 "8e26df28c90db8cf1e89220ccc5cf297a9a64ee1dffed2b478c421e63bc71f56"
+      sha256 "cbaf6d65d417fb1b01cf159d0763551d40bb30cfa74881f47dee2c972936da78"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_linux_amd64.tar.gz"
-      sha256 "8242ec3dd2e4b34a3ca1909dd76a6f73587bd37e18d926dd396ad2d81374514c"
+      sha256 "48e5b71b5b7bfd7d2860b302ba063bd61782f0278577c50a6d9d8358e5697ca2"
     end
     on_arm do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_linux_arm64.tar.gz"
-      sha256 "617a231285323e004771d990c04f33097f54b0af85e60e190cb5b9a95907275a"
+      sha256 "bc3926d68379cba420e8fed121c93442c9e5f18d2c11e0495559be18bd5dce02"
     end
   end
 
