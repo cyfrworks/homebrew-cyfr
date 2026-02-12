@@ -14,22 +14,28 @@ cask "cyfr" do
   on_macos do
     on_intel do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_darwin_amd64.tar.gz"
-      sha256 "402ab7a9b1f9ce41d600ea52bf530180c945af048d825d01086eb403feaf8536"
+      sha256 "f2f812a3149166dc37e9c01e002b7eaaa098af481104d128ba416d69ff666880"
     end
     on_arm do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_darwin_arm64.tar.gz"
-      sha256 "051f1f8ba3ec2022a8c701ca5a07ccb6354102e6fcbd465234c4d774c4ba3638"
+      sha256 "0214fc5f3148c01befc267b57d3b24ce3d6b22f384a349b93924c9cc315b959f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_linux_amd64.tar.gz"
-      sha256 "f24d0e14219bfe0d88e62049faed9ba4c0af0ab8b3544dee82d8550a5faf3268"
+      sha256 "9fd1564dc5c6c9f5d4bb97340e2fd50755768980edfe4bdcb4589e927194bb34"
     end
     on_arm do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_linux_arm64.tar.gz"
-      sha256 "b1d3f83706f8671791938ceb2223909ad8cadf10867210a72b8e48f089151411"
+      sha256 "0507a430a995875b8541d50c507336f3a56210457a75836aec7633173bcb0361"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cyfr"]
     end
   end
 
