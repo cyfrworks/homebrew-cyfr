@@ -3,7 +3,7 @@ cask "cyfr" do
   name "cyfr"
   desc "CLI for the CYFR sandboxed WASM runtime"
   homepage "https://cyfr.run"
-  version "1.0.6"
+  version "1.0.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "cyfr" do
   on_macos do
     on_intel do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_darwin_amd64.tar.gz"
-      sha256 "f63789a906aaf866cd869f9f3c6fa202002e847494bcc0ded045f21c501f993d"
+      sha256 "389b1de46ca27e1fc1d1fe3614da07d95be2363ca2fe8bad27d752498267567f"
     end
     on_arm do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_darwin_arm64.tar.gz"
-      sha256 "baa1ad542cd055ba2b00c4d2c8fe2284fb2de5140a708ab3e0fd16b807fe2b98"
+      sha256 "dc741ca8d6a83ea149944b01c2c640c315bf038e4e3eb227d23153d70694796b"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_linux_amd64.tar.gz"
-      sha256 "8799d172411989c9476c566bc3b80a0a8e54380ac77e0962a7cab2beb350bcea"
+      sha256 "6c5cb6e11563b3c6788880597e5e0fa90b60a729564ef0fa80cf6631c122b729"
     end
     on_arm do
       url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_linux_arm64.tar.gz"
-      sha256 "cc62c1bc6090ab34f7fa483dc8b0ced6ebe7f5000662ef33d55c74ed6dd4ecee"
+      sha256 "bebc41acdb09f296bb8cee50b494512e4ef6a4c8a304a5217b0e1297386b27d5"
     end
   end
 
