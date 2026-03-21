@@ -5,22 +5,22 @@
 class Cyfr < Formula
   desc "CLI for the CYFR sandboxed WASM runtime"
   homepage "https://cyfr.run"
-  version "0.9.0"
+  version "1.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v0.9.0/cyfr_0.9.0_darwin_amd64.tar.gz"
-      sha256 "4c48a80e26c60e44415a4e528e7d5ce00da0734d0a98fd2a15d3add2a34857c5"
+      url "https://github.com/cyfrworks/cyfr/releases/download/v1.2.0/cyfr_1.2.0_darwin_amd64.tar.gz"
+      sha256 "36ac3cb6beb7edc59cc6938cdd7efdfa639b85920b2031e5b56012dd586e63d0"
 
-      def install
+      define_method(:install) do
         bin.install "cyfr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v0.9.0/cyfr_0.9.0_darwin_arm64.tar.gz"
-      sha256 "7a5b0e85e0b951d4b2946fae2876e5c23897e914cc4cafa40b8c869a3b0bd592"
+      url "https://github.com/cyfrworks/cyfr/releases/download/v1.2.0/cyfr_1.2.0_darwin_arm64.tar.gz"
+      sha256 "36d656436bbd36ec73beb349c28846bc92e561a467dc611c251c3db1d86ddf5f"
 
-      def install
+      define_method(:install) do
         bin.install "cyfr"
       end
     end
@@ -28,16 +28,16 @@ class Cyfr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v0.9.0/cyfr_0.9.0_linux_amd64.tar.gz"
-      sha256 "237ab1204b38268d3a64890dc0f087a4ef6fe389b4ece00da3fc8c705d69e241"
-      def install
+      url "https://github.com/cyfrworks/cyfr/releases/download/v1.2.0/cyfr_1.2.0_linux_amd64.tar.gz"
+      sha256 "c851177b2d96a4869dc855b836dc554f33e491ac04c8fb00adb8219181158547"
+      define_method(:install) do
         bin.install "cyfr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v0.9.0/cyfr_0.9.0_linux_arm64.tar.gz"
-      sha256 "bde938a71172501eea0c7280faca1d90310d50969acfe51749c745217289aa0b"
-      def install
+      url "https://github.com/cyfrworks/cyfr/releases/download/v1.2.0/cyfr_1.2.0_linux_arm64.tar.gz"
+      sha256 "58b2a47894d92fdc561a23654dbef26a827cf3e87177dab60434a9a649f5d77b"
+      define_method(:install) do
         bin.install "cyfr"
       end
     end
