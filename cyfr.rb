@@ -10,7 +10,7 @@ class Cyfr < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/cyfrworks/cyfr/releases/download/v1.2.8/cyfr_1.2.8_darwin_amd64.tar.gz"
-      sha256 "6261b4f19d4fbe80ca7fe4adfe00b4c5528b2eeb23f1058ce4966d6e74ac6698"
+      sha256 "b3f32b535aa39b63c82abac6fa44c71a86dbdb3e18c5deda956c660fc4ef7903"
 
       define_method(:install) do
         bin.install "cyfr"
@@ -18,7 +18,7 @@ class Cyfr < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/cyfrworks/cyfr/releases/download/v1.2.8/cyfr_1.2.8_darwin_arm64.tar.gz"
-      sha256 "0f711787c6127c864af74ef6043ac763c76e0256fe10bdb83fc7c9286e09d6b4"
+      sha256 "fe150d98f31e7584a0f958443a1783443623a0cd7a0804bdf43e97104e089b01"
 
       define_method(:install) do
         bin.install "cyfr"
@@ -29,14 +29,14 @@ class Cyfr < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/cyfrworks/cyfr/releases/download/v1.2.8/cyfr_1.2.8_linux_amd64.tar.gz"
-      sha256 "930d59eff7b6afca2c39d7181be62a6931ccaddb07b416c7a12f8a298e019e58"
+      sha256 "85a02cc773bb8fa71a110fb3c5ee5181b752bc1efaab889e5ea7e9dea4966758"
       define_method(:install) do
         bin.install "cyfr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/cyfrworks/cyfr/releases/download/v1.2.8/cyfr_1.2.8_linux_arm64.tar.gz"
-      sha256 "4862b9109e87dfafb28ee797601318bb630137e56c20f0c0ab7e779c932b688f"
+      sha256 "11b1b97c5818966a452a0d8108d863e293a354b83e63b2838bf7c1407ea62bc9"
       define_method(:install) do
         bin.install "cyfr"
       end
