@@ -5,20 +5,20 @@
 class Cyfr < Formula
   desc "CLI for the CYFR sandboxed WASM runtime"
   homepage "https://cyfr.run"
-  version "1.7.5"
+  version "1.7.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v1.7.5/cyfr_1.7.5_darwin_amd64.tar.gz"
-      sha256 "4459ea4ca8aea5d93acbb716b5140f7748c7f5cdbd21b5f44d0397f8217cf315"
+      url "https://github.com/cyfrworks/cyfr/releases/download/v1.7.6/cyfr_1.7.6_darwin_amd64.tar.gz"
+      sha256 "9d41b1f99fdc935b3dc0700fe366dfb388cbb2bc84a9374cc80365176c967d60"
 
       define_method(:install) do
         bin.install "cyfr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v1.7.5/cyfr_1.7.5_darwin_arm64.tar.gz"
-      sha256 "54baf304c719b2174c1b115c5943709c5be063074c3c6d2c2c4b773f7252efa6"
+      url "https://github.com/cyfrworks/cyfr/releases/download/v1.7.6/cyfr_1.7.6_darwin_arm64.tar.gz"
+      sha256 "bb0456457e51e971c49d5acd0c303c5a0b937b32c64272230786fd024a8ead7c"
 
       define_method(:install) do
         bin.install "cyfr"
@@ -28,15 +28,15 @@ class Cyfr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v1.7.5/cyfr_1.7.5_linux_amd64.tar.gz"
-      sha256 "fd39b60cfb0805aa48a1d968c1fdfb0cd0361c1901c71c17ae3a27d03255de83"
+      url "https://github.com/cyfrworks/cyfr/releases/download/v1.7.6/cyfr_1.7.6_linux_amd64.tar.gz"
+      sha256 "21adc0edddcb013646a2396ae0ebb8764bd4af12644665feca5c20f8add9ed0c"
       define_method(:install) do
         bin.install "cyfr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v1.7.5/cyfr_1.7.5_linux_arm64.tar.gz"
-      sha256 "51ab9f7b9a7497334fc6683bbab0839aa550549bbeee5c0f7d7995f3c571f5e2"
+      url "https://github.com/cyfrworks/cyfr/releases/download/v1.7.6/cyfr_1.7.6_linux_arm64.tar.gz"
+      sha256 "108765250d89d01aee9c9e9f499d8cffb804b28cf4f32b28d1a3dfe1b403176c"
       define_method(:install) do
         bin.install "cyfr"
       end
