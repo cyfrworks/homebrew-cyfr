@@ -9,16 +9,16 @@ class Cyfr < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v0.5.0/cyfr_0.5.0_darwin_amd64.tar.gz"
-      sha256 "2f938eb7cf82556e6e39414baf08373344f16ac4552c233f1019a77daebeec25"
+      url "https://github.com/cyfrworks/cyfr/releases/download/0.5.0/cyfr_0.5.0_darwin_amd64.tar.gz"
+      sha256 "187a50e20aefa8fd458e133351a268679edb24167911d8896ddb84782306aa0d"
 
       define_method(:install) do
         bin.install "cyfr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v0.5.0/cyfr_0.5.0_darwin_arm64.tar.gz"
-      sha256 "3e0eedd156f9bd86d93ab68e4d301a810a87e3851e8fe4a6b8d216823e24d6d1"
+      url "https://github.com/cyfrworks/cyfr/releases/download/0.5.0/cyfr_0.5.0_darwin_arm64.tar.gz"
+      sha256 "61b94c034203ac5e69b3986b4901f55010b393085d63c21691586d5c0a77ab19"
 
       define_method(:install) do
         bin.install "cyfr"
@@ -28,15 +28,15 @@ class Cyfr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v0.5.0/cyfr_0.5.0_linux_amd64.tar.gz"
-      sha256 "4ae3a1bbd701869ab425b5a9e5b03d074365ee63b30d7bb89785e6cf95b53596"
+      url "https://github.com/cyfrworks/cyfr/releases/download/0.5.0/cyfr_0.5.0_linux_amd64.tar.gz"
+      sha256 "99caafbd88b0066dd20505f8a33b9842647ab925263392bea382c6ed555fc886"
       define_method(:install) do
         bin.install "cyfr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cyfrworks/cyfr/releases/download/v0.5.0/cyfr_0.5.0_linux_arm64.tar.gz"
-      sha256 "1d09491eacf9f268f85d61ef70a0a7429d00999b8de81fbb35df54ff5a834cfc"
+      url "https://github.com/cyfrworks/cyfr/releases/download/0.5.0/cyfr_0.5.0_linux_arm64.tar.gz"
+      sha256 "feb9bd045f020af0fd2eaae54dfd07d277dce7203c6428bb65e7cfbb983036a0"
       define_method(:install) do
         bin.install "cyfr"
       end
