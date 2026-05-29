@@ -3,7 +3,7 @@ cask "cyfr" do
   name "cyfr"
   desc "CLI for the CYFR sandboxed WASM runtime"
   homepage "https://cyfr.run"
-  version "1.1.1"
+  version "0.5.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,23 +13,27 @@ cask "cyfr" do
 
   on_macos do
     on_intel do
-      url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_darwin_amd64.tar.gz"
-      sha256 "5546b51d6c8f044baee91d990800d226b579f49b013a0e0973dcc96c65722b87"
+      url "https://github.com/cyfrworks/cyfr/releases/download/#{version}/cyfr_#{version}_darwin_amd64.tar.gz",
+        verified: "github.com/cyfrworks/cyfr"
+      sha256 "7ccbd84672080898de2aaea883f93aefc9b4402e6f945c56e3fcd4349879ef21"
     end
     on_arm do
-      url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_darwin_arm64.tar.gz"
-      sha256 "a7eccd067d07f6b0205c773b2de3fafe772eb5b6d8035710557b21846e0cf308"
+      url "https://github.com/cyfrworks/cyfr/releases/download/#{version}/cyfr_#{version}_darwin_arm64.tar.gz",
+        verified: "github.com/cyfrworks/cyfr"
+      sha256 "fea2b575596dc53c351ba4bc576e7169de2994b5024c1bd66957bd0ea525f981"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_linux_amd64.tar.gz"
-      sha256 "0fb1486ddbc09cf6a105645e71e4c677b6214a953f37329d1a723568bf047f50"
+      url "https://github.com/cyfrworks/cyfr/releases/download/#{version}/cyfr_#{version}_linux_amd64.tar.gz",
+        verified: "github.com/cyfrworks/cyfr"
+      sha256 "877dbe072d472f8d438f4ff392556945188d7ef7fd6733dddef470f11a2810ed"
     end
     on_arm do
-      url "https://github.com/cyfrworks/cyfr/releases/download/v#{version}/cyfr_#{version}_linux_arm64.tar.gz"
-      sha256 "be4b18e46ebd65db1210c1f547bda7aadf10b19030575251aa14f4aaee83c4e3"
+      url "https://github.com/cyfrworks/cyfr/releases/download/#{version}/cyfr_#{version}_linux_arm64.tar.gz",
+        verified: "github.com/cyfrworks/cyfr"
+      sha256 "6a025cdd2fb01a093ab6486f029adf129fd9e70cea5c4aed0d194b50fee34535"
     end
   end
 
